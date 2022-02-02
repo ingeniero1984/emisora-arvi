@@ -1,19 +1,18 @@
 <template>
   <div class="home">
-    <Navbar />
-    <HelloWorld msg="Emisora Arvi"/>
+    <h1>Inicio</h1>
+    <!-- <img
+        class="w-28 h-20 ml-4 cursor-pointer"
+        src="@/assets/img/logo-1.jpg"
+        alt=""
+      /> -->
   </div>
 </template>
 
 <script lang="ts">
-import { defineAsyncComponent, defineComponent } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Home',
-  components: {
-    Navbar: defineAsyncComponent(() =>
-      import('@/components/layouts/Navbar.vue')
-    )
-  },
+  name: 'Home'
 });
 </script>

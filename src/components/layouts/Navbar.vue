@@ -1,46 +1,43 @@
 <template>
-  <div class="font-sans antialiased" id="app">
-  <nav class="flex justify-between flex-wrap bg-gray-800 p-6 text-right">
+  <div class="navbar font-sans antialiased">
+  <nav class="flex justify-between flex-wrap bg-gray-800 text-right">
     <div class="flex items-center flex-no-shrink text-white mr-6">
-      <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
+      <!-- <img class="w-28 h-20 ml-4 cursor-pointer" src="@/assets/img/logo.png" alt="logo arvi"/> -->
+      <h1 class="text-xl text-yellow-600 ml-6">{{ name }}</h1>
     </div>
-    <div class="block sm:hidden">
-      <button @click="toggle" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      </button>
-    </div>
-    <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
-      <div class="text-sm sm:flex-grow">
-        <a href="#responsive-header" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4">
-          Docs
-        </a>
-        <a href="#responsive-header" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4">
-          Examples
-        </a>
-        <a href="#responsive-header" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white">
-          Blog
-        </a>
-      </div>
-    </div>
+    <Audio />
+    <ul class="md:flex md:items-center mr-6">
+      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Home' }">Home</router-link>
+      </li>
+      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Programation' }">Programación</router-link>
+      </li>
+      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Events' }">Eventos</router-link>
+      </li>
+      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Contact' }">Contactenos</router-link>
+      </li>
+    </ul>
   </nav>
 </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineAsyncComponent, defineComponent } from 'vue'
 
 export default defineComponent({
     name: 'Navbar',
-    setup() {
-        const open = ref<boolean>(false)
-        
-        const toggle = () => {
-            open.value = !open.value
-        }
+    components: {
+      Audio: defineAsyncComponent(() =>
+      import('@/components/Audio.vue')
+    )
+    },
+    setup () {
+      const name = 'Organización Musical Arvi'
 
-        return {
-            open, toggle
-        }
+      return  { name }
     }
 })
 </script>

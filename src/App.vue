@@ -1,10 +1,20 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
+  <Navbar />
   <router-view/>
 </template>
+
+<script lang="ts">
+import { defineAsyncComponent, defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'Home',
+  components: {
+    Navbar: defineAsyncComponent(() =>
+      import('@/components/layouts/Navbar.vue')
+    )
+  },
+});
+</script>
 
 <style>
 #app {
