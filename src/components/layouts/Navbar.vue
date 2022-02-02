@@ -1,9 +1,9 @@
 <template>
   <div class="navbar font-sans antialiased">
-  <nav class="flex justify-between flex-wrap bg-gray-800 text-right">
+  <nav class="flex justify-between flex-wrap bg-gray-800 text-right py-4">
     <div class="flex items-center flex-no-shrink text-white mr-6">
       <!-- <img class="w-28 h-20 ml-4 cursor-pointer" src="@/assets/img/logo.png" alt="logo arvi"/> -->
-      <h1 class="text-xl text-yellow-600 ml-6">{{ name }}</h1>
+      <h1 class="text-xl text-yellow-600 ml-6 font-bold">{{ name }}</h1>
     </div>
     <Audio />
     <ul class="md:flex md:items-center mr-6">

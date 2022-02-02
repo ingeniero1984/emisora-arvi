@@ -14,6 +14,6 @@ export default defineComponent({
 
 <style>
 .audio {
-    @apply py-2 m-3
+    @apply py-2 mr-6
 }
 </style>
