@@ -1,23 +1,21 @@
 <template>
   <div class="navbar font-sans antialiased">
-  <nav class="flex justify-between flex-wrap bg-gray-800 text-right py-4">
-    <div class="flex items-center flex-no-shrink text-white mr-6">
-      <!-- <img class="w-28 h-20 ml-4 cursor-pointer" src="@/assets/img/logo.png" alt="logo arvi"/> -->
-      <h1 class="text-xl text-yellow-600 ml-6 font-bold">{{ name }}</h1>
+  <nav class="flex justify-between flex-wrap bg-gray-900 text-right py-4">
+    <div class="flex items-center flex-no-shrink text-white">
+      <img class="w-full h-20 ml-8 cursor-pointer" src="@/assets/img/logo-arvi.png" alt="logo arvi"/>
     </div>
-    <Audio />
     <ul class="md:flex md:items-center mr-6">
-      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
-        <router-link :to="{ name: 'Home' }">Home</router-link>
+      <li class="mx-4 my-2 md:my:0 text-lg text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Home' }">INICIO</router-link>
       </li>
-      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
-        <router-link :to="{ name: 'Programation' }">Programación</router-link>
+      <li class="mx-4 my-2 md:my:0 text-lg text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Programation' }">PROGRAMACIÓN</router-link>
       </li>
-      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
-        <router-link :to="{ name: 'Events' }">Eventos</router-link>
+      <li class="mx-4 my-2 md:my:0 text-lg text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Events' }">EVENTOS</router-link>
       </li>
-      <li class="mx-4 my-2 md:my:0 text-sm text-white hover:text-yellow-600 cursor-pointer">
-        <router-link :to="{ name: 'Contact' }">Contactenos</router-link>
+      <li class="mx-4 my-2 md:my:0 text-lg text-white hover:text-yellow-600 cursor-pointer">
+        <router-link :to="{ name: 'Contact' }">CONTACTENOS</router-link>
       </li>
     </ul>
   </nav>
@@ -25,20 +23,10 @@
 </template>
 
 <script lang="ts">
-import { defineAsyncComponent, defineComponent } from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-    name: 'Navbar',
-    components: {
-      Audio: defineAsyncComponent(() =>
-      import('@/components/Audio.vue')
-    )
-    },
-    setup () {
-      const name = 'Organización Musical Arvi'
-
-      return  { name }
-    }
+  name: 'Navbar'
 })
 </script>
 

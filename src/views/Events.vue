@@ -1,13 +1,24 @@
 <template>
-  <div class="home">
-    <h1>Eventos</h1>
+  <div class="mt-4">
+    <Card />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineAsyncComponent, defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Events'
+  name: 'Events',
+    components: {
+    Card: defineAsyncComponent(() =>
+      import('@/components/Card.vue')
+    )
+  },
 });
 </script>
+
+<style scoped>
+div {
+  @apply bg-black
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <audio class="audio" controls src="https://streaming.radiosenlinea.com.ar/8920/stream" />
+        <audio class="audio" controls autoplay src="https://streaming.radiosenlinea.com.ar/8920/stream"/>
     </div>
 </template>
 
@@ -14,6 +14,6 @@ export default defineComponent({
 
 <style>
 .audio {
-    @apply py-2 mr-6
+    @apply py-1 m-3
 }
 </style>
