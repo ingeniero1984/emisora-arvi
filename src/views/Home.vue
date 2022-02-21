@@ -4,10 +4,10 @@
       <img class="rounded" src="@/assets/img/logo-torres.png" alt="" />
     </div>
     <div class="w-1/2 p-4 font-extrabold text-3xl mt-48 text-center">
-      <p class="uppercase text-white">
+      <p class="uppercase text-yellow-600">
         {{ title }}
         <a
-          class="text-red hover:underline hover:text-yellow-700"
+          class="text-red hover:underline hover:text-white"
           rel="nofollow noopener"
           href="https://l.facebook.com/l.php?u=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dc3.amorocho.arvi%26fbclid%3DIwAR3xq-EXFNKUjaP-NSBxYQX2yArt9PgeqY5zLc2NIXeVFuJC-2x8zyluRVw&h=AT0HJrWjxbwWP6ieAgJ-KRZYgd_fAO8tXIAs4RN9hBUuh8xTYP8_yA_4cA7pWv2bpYeFAOTfzZGzvrYd2ecVobWcp1V28GtJ2YhRR3VLc0B4y-57hnbfyiMlBg&__tn__=%2CmH-R&c[0]=AT35HpgPiz7u3oBrax-LN3cJCuDSnFgXa4HkSZ5_x7HUC9Nlp-scSSXk8vaj7WCRINxq--FK1oAE0dMoIKIehe8W2vHwNocNkAij3EJoKQOapHk1C1FE4i1XAL-efGfQbfW00jKnz0fdwsFTOaahmC1Y"
           target="_blank"
@@ -19,9 +19,9 @@
       </div>
       <hr />
       <div class="mt-10">
-        <p class="text-white text-sm text-center mb-3">Encuentranos en:</p>
+        <p class="text-yellow-600 text-sm text-center mb-3">Encuentranos en:</p>
         <div class="flex justify-center">
-          <a href="https://www.facebook.com/arvismaquina.armandovilla" class="mr-6 text-white" target="_blank">
+          <a href="https://www.facebook.com/arvismaquina.armandovilla" class="mr-6 text-white hover:text-blue-400" target="_blank">
             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
               class="w-4" role="img" xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512">
@@ -30,7 +30,7 @@
               </path>
             </svg>
           </a>
-          <a href="https://www.instagram.com/arvi_internacional/" class="mr-6 text-white" target="_blank">
+          <a href="https://www.instagram.com/arvi_internacional/" class="mr-6 text-white hover:text-red-400" target="_blank">
             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
               class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path fill="currentColor"
