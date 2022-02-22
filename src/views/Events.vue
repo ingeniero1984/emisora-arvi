@@ -18,7 +18,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-div {
-  @apply bg-black
-}
 </style>

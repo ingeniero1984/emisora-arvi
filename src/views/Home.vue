@@ -42,6 +42,11 @@
       </div>
     </div>
   </div>
+  <hr />
+  <div class="text-center mt-3">
+    <h1 class="py-2 uppercase text-yellow-600 text-3xl font-bold">Los dj's de moda</h1>
+    <CardDj />
+  </div>
 </template>
 
 <script lang="ts">
@@ -51,6 +56,7 @@ export default defineComponent({
   name: "Home",
   components: {
     Audio: defineAsyncComponent(() => import("@/components/Audio.vue")),
+    CardDj: defineAsyncComponent(() => import("@/components/CardDJ.vue"))
   },
   setup() {
     const title = "Escucha nuestra transmisión en vivo";
@@ -63,9 +69,5 @@ export default defineComponent({
 <style scoped>
 .logo {
   @apply w-2/4 h-auto ml-4 rounded;
-}
-
-div {
-  @apply bg-black
 }
 </style>
